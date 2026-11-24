@@ -122,7 +122,7 @@ Path-style S3 API on `http://127.0.0.1:9000` by default:
 dotnet test
 ```
 
-44 xUnit tests cover the store (versioning, dedup, delete markers,
+53 xUnit tests cover the store (versioning, dedup, delete markers,
 pruning), SigV4 (official AWS vectors, tamper and expiry cases),
 multipart (out-of-order parts, ETag, abort, minimum part size) and the
 HTTP layer end to end against a live server on localhost.
