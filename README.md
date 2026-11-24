@@ -82,7 +82,8 @@ dotnet run --project src/S3Lite -- get photos cat.jpg ./cat-back.jpg
 dotnet run --project src/S3Lite -- presign photos cat.jpg --expires 3600
 ```
 
-Or build once and use the binary:
+Or build once and use the binary (the .NET runtime must be on your PATH,
+e.g. `export PATH="$HOME/workspace/.dotnet:$PATH"` if you installed it there):
 
 ```bash
 dotnet build -c Release

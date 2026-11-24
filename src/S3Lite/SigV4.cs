@@ -200,6 +200,8 @@ public static class SigV4
             ("X-Amz-SignedHeaders", "host"),
         };
         var host = new Uri(endpoint).Host;
+        var endpointUri = new Uri(endpoint);
+        host = endpointUri.Host + (endpointUri.IsDefaultPort ? "" : ":" + endpointUri.Port);
         var headers = new List<(string, string)> { ("host", host) };
         var canonical = BuildCanonicalRequest(method, CanonicalUri(path),
             CanonicalQueryString(query), headers, UnsignedPayload);

@@ -40,9 +40,7 @@ public static class Program
                 return 0;
             }
             default:
-                Console.Error.WriteLine($"Unknown command: {args[0]}");
-                PrintHelp();
-                return 2;
+                return await Cli.RunAsync(args);
         }
     }
 
